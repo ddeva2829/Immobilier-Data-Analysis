@@ -7,7 +7,7 @@ import seaborn as sns
 st.set_page_config(
         page_title="Étude de l'immobilier en France",
         page_icon="🏠",  # Replace this with the path to your icon file
-        layout="centered"
+        layout="wide"
     )
 
 st.title("ETUDE DU MARCHE DE L’IMMOBILIER EN FRANCE")
@@ -15,7 +15,10 @@ st.sidebar.title("🏠 Sommaire")
 pages=["Le Projet", "Exploration", "DataVizualization", "Modélisation","Machine Learning","Conclusion & Perspective"]
 page=st.sidebar.radio("Aller vers", pages)
 
-if page == pages[0] : 
+col = st.columns((4.5, 2), gap='medium')
+
+with col[0]:
+ if page == pages[0] : 
   st.write("### Introduction Du Projet")
   st.write("""
     L’analyse du marché de l’immobilier français est cruciale pour comprendre les tendances, anticiper les évolutions futures et conseiller les parties prenantes (investisseurs, gouvernement, acheteurs, etc.). Cette étude se place dans un contexte où le marché immobilier est influencé par divers facteurs tels que les politiques économiques, les taux d’intérêts, les mouvements démographiques et les avancées technologiques.
@@ -47,8 +50,15 @@ if page == pages[0] :
   st.write("""
     Conseiller financier en reconversion data analyste au sein de la banque CCF, il est en contact avec des experts métiers dans le financement immobilier et de courtages. Des benchmarks avec des projets similaires dans nos entreprises respectives n’ont pas pu être réalisés car les données n’étaient pas en open-source. Mais, une approche avec d’autres sources telles que STATISTA, seloger.com, les données de l’INSEE et de la Banque de France ont pu être possibles. 
 
-Dans le pré traitement des données, nous avons d’abord procédé à leur normalisation, le traitement des valeurs manquantes et aberrantes. Ainsi, le feature engineering nous aidera à créer de nouvelles variables pertinentes pour notre analyse, comme le prix au mètre carré, la catégorisation des DPE en fonction de l’évolution des prix des biens par régions, etc. 
+    Dans le pré traitement des données, nous avons d’abord procédé à leur normalisation, le traitement des valeurs manquantes et aberrantes. Ainsi, le feature engineering nous aidera à créer de nouvelles variables pertinentes pour notre analyse, comme le prix au mètre carré, la catégorisation des DPE en fonction de l’évolution des prix des biens par régions, etc. 
 
-Nous utiliserons des outils de visualisation de Python (Matplotlib, Seaborn) et de Power BI pour présenter notre analyse et représenter les tendances et les relations dans les données. Des analyses statistiques nous permettront de déterminer les facteurs influençant le marché immobilier pour une meilleure prise de décisions. 
+    Nous utiliserons des outils de visualisation de Python (Matplotlib, Seaborn) et de Power BI pour présenter notre analyse et représenter les tendances et les relations dans les données. Des analyses statistiques nous permettront de déterminer les facteurs influençant le marché immobilier pour une meilleure prise de décisions. 
 
     """)
+with col[1]:
+  with st.expander('About', expanded=True):
+        st.write('''
+            - Data: [Data.Gouv.fr](https://files.data.gouv.fr/geo-dvf/latest/csv/).
+            - :orange[**DataScientest**]: Ce projet a été réalisés dans le cadre de notre formation en data science via l'organisme Datascientest.
+            
+            ''')
