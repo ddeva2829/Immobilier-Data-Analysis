@@ -12,7 +12,7 @@ st.set_page_config(
 
 st.title("ETUDE DU MARCHE DE L’IMMOBILIER EN FRANCE")
 st.sidebar.title("🏠 Etude Immobilier")
-pages=["Le Projet", "Exploration", "DataVizualization", "Modélisation","Machine Learning","Conclusion & Perspective"]
+pages=["Le Projet", "Le Jeu de données", "DataVizualization", "Modélisation","Machine Learning","Conclusion & Perspective"]
 page=st.sidebar.radio("Aller vers", pages)
 
 col = st.columns((4.5, 2), gap='medium')
@@ -49,13 +49,19 @@ with col[0]:
   st.subheader("Mohamed KEITA")
   st.write("""
  <div style="text-align: justify;">          
-  <p> Conseiller financier en reconversion data analyste au sein de la banque CCF, il est en contact avec des experts métiers dans le financement immobilier et de courtages. Des benchmarks avec des projets similaires dans nos entreprises respectives n’ont pas pu être réalisés car les données n’étaient pas en open-source. Mais, une approche avec d’autres sources telles que STATISTA, seloger.com, les données de l’INSEE et de la Banque de France ont pu être possibles. 
-
+  <p> Conseiller financier en reconversion data analyste au sein de la banque CCF, il est en contact avec des experts métiers dans le financement immobilier et de courtages. 
     
    </p>
  </div>        
    
     """, unsafe_allow_html=True)
+  
+ if page == pages[1] : 
+    df=pd.read_csv("GouvImmo_full.csv")
+    st.dataframe(df.head(10))
+    st.write(df.shape)
+    st.dataframe(df.describe())
+
 with col[1]:
   with st.expander('About', expanded=True):
         st.write('''
