@@ -22,13 +22,14 @@ with col[0]:
   st.write("### Introduction Du Projet")
   st.write("""
  <div style="text-align: justify;">
-  <p>  Le projet vise à analyser le marché immobilier français, crucial pour comprendre les tendances, anticiper les développements futurs et conseiller les parties prenantes. Il implique la collecte, le nettoyage et l'analyse des données de 2018 à 2023, en tenant compte de facteurs tels que les politiques économiques, les taux d'intérêt, la démographie et les avancées technologiques. Sur le plan scientifique, il applique des méthodes statistiques et d'apprentissage automatique pour analyser les tendances, prédire les développements futurs et fournir des insights pour la prise de décision.
+  <p>  Ce projet consiste à analyser le marché immobilier français afin de comprendre ses tendances, anticiper les évolutions futures et conseiller les parties prenantes. Il inclut la collecte, le nettoyage et l'analyse des données de 2018 à 2023, en tenant compte de facteurs tels que les politiques économiques, les taux d'intérêt, la démographie et les avancées technologiques. Sur le plan scientifique, il applique des méthodes statistiques et d'apprentissage automatique pour analyser les tendances, prédire les développements futurs et fournir des insights pour la prise de décision.
 
-    Profils des Membres du Groupe :
+    Dans le prétraitement des données, une normalisation et le traitement des valeurs manquantes et aberrantes sont effectués. Le feature engineering permettra de créer de nouvelles variables pertinentes pour l'analyse, comme le prix au mètre carré et la catégorisation des DPE en fonction de l'évolution des prix des biens par régions. Des outils de visualisation tels que Matplotlib, Seaborn et Power BI seront utilisés pour présenter l'analyse et représenter les tendances et les relations dans les données. Des analyses statistiques aideront à déterminer les facteurs influençant le marché immobilier pour une meilleure prise de décisions.
 
-  </p>
+    </p>
  </div>
     """, unsafe_allow_html=True)
+  st.subheader("Profils des Membres du Groupe :")
 
   st.subheader("Éric LOUGUET")
   st.write("""
@@ -50,9 +51,7 @@ with col[0]:
  <div style="text-align: justify;">          
   <p> Conseiller financier en reconversion data analyste au sein de la banque CCF, il est en contact avec des experts métiers dans le financement immobilier et de courtages. Des benchmarks avec des projets similaires dans nos entreprises respectives n’ont pas pu être réalisés car les données n’étaient pas en open-source. Mais, une approche avec d’autres sources telles que STATISTA, seloger.com, les données de l’INSEE et de la Banque de France ont pu être possibles. 
 
-    Dans le pré traitement des données, nous avons d’abord procédé à leur normalisation, le traitement des valeurs manquantes et aberrantes. Ainsi, le feature engineering nous aidera à créer de nouvelles variables pertinentes pour notre analyse, comme le prix au mètre carré, la catégorisation des DPE en fonction de l’évolution des prix des biens par régions, etc. 
-
-    Nous utiliserons des outils de visualisation de Python (Matplotlib, Seaborn) et de Power BI pour présenter notre analyse et représenter les tendances et les relations dans les données. Des analyses statistiques nous permettront de déterminer les facteurs influençant le marché immobilier pour une meilleure prise de décisions. 
+    
    </p>
  </div>        
    
