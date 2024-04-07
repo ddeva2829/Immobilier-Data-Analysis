@@ -33,7 +33,7 @@ with col[0]:
   st.subheader("Éric LOUGUET")
   st.write("""
  <div style="text-align: justify;">
-   <p> Coordinateur de la chaîne d'approvisionnement, cherche à comparer les conclusions du projet avec les opinions des professionnels de l'immobilier pour valider les analyses.
+   <p> Coordinateur de Supply Chain, cherche à comparer les conclusions du projet avec les opinions des professionnels de l'immobilier pour valider les analyses.
    </p>
  </div>        
     """, unsafe_allow_html=True)
