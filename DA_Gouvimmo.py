@@ -22,17 +22,10 @@ with col[0]:
   st.write("### Introduction Du Projet")
   st.write("""
  <div style="text-align: justify;">
-  <p> L’analyse du marché de l’immobilier français est cruciale pour comprendre les tendances, anticiper les évolutions futures et conseiller les parties prenantes (investisseurs, gouvernement, acheteurs, etc.). Cette étude se place dans un contexte où le marché immobilier est influencé par divers facteurs tels que les politiques économiques, les taux d’intérêts, les mouvements démographiques et les avancées technologiques.
+  <p>  Le projet vise à analyser le marché immobilier français, crucial pour comprendre les tendances, anticiper les développements futurs et conseiller les parties prenantes. Il implique la collecte, le nettoyage et l'analyse des données de 2018 à 2023, en tenant compte de facteurs tels que les politiques économiques, les taux d'intérêt, la démographie et les avancées technologiques. Sur le plan scientifique, il applique des méthodes statistiques et d'apprentissage automatique pour analyser les tendances, prédire les développements futurs et fournir des insights pour la prise de décision.
 
-    D’un point de vue technique, ce projet implique la collecte, le nettoyage et l’analyse de grande quantité de données de l’année 2018 à 2023. Le traitement des données variées (prix, localisations, caractéristiques des biens, etc) croisé à des données liées au DPE, densité de la population, évolution de l’inflation nécessite des pré traitements des données et une visualisation de ces données pour une meilleure compréhension.
+    Profils des Membres du Groupe :
 
-    Scientifiquement, ce projet implique l’application de méthodes statistiques et de machine learning pour pouvoir analyser les tendances et prédire les évolutions futures. Il s’inscrit dans une démarche d’analyse prédictive et descriptive avec pour principales objectifs:
-
-    - D’analyser les tendances du marché en incluant la compréhension de l’évolution des prix, des volumes des ventes, des préférences des consommateurs entre 2018 et 2023, et en corrélant les données sur la nature des biens (DPE par rapport à la typologie des biens et la variation de leur prix respectifs selon leur localisation)
-    - De prédire les tendances futures en utilisant les données historiques
-    - D’aider à la prise de décision en fournissant des insights pour aider les décideurs dans leurs stratégies d’investissement et de politique publique
-
-    Notre groupe est composé d’alumni déjà expert métier dans un domaine plus ou moins lié au marché de l’immobilier:
   </p>
  </div>
     """, unsafe_allow_html=True)
@@ -40,7 +33,7 @@ with col[0]:
   st.subheader("Éric LOUGUET")
   st.write("""
  <div style="text-align: justify;">
-   <p> Coordinateur Supply Chain au sein d’une PME spécialisée dans la fibre optique. Ne connaissant aucun expert métier personnellement, il n’a pu entrer en contact avec l’un d’entre eux pour affiner la problématique et les modèles sous-jacents. Cependant, il serait judicieux selon lui à la fin du projet de comparer ses conclusions avec celles d’un agent immobilier par exemple. Cela permettrait soit d’affirmer les analyses si elles vont dans le sens du point de vue d’un professionnel, ou alors si ce n’est pas le cas, voir quelles seraient les raisons de ces avis divergents.
+   <p> Coordinateur de la chaîne d'approvisionnement, cherche à comparer les conclusions du projet avec les opinions des professionnels de l'immobilier pour valider les analyses.
    </p>
  </div>        
     """, unsafe_allow_html=True)
@@ -48,8 +41,7 @@ with col[0]:
   st.subheader("Marc DEVADEVAN")
   st.write("""
  <div style="text-align: justify;">         
-  <p>  Animateur Qualité Expert opérationnel relation client au sein du groupe LA POSTE.En tant que professionnel de la logistique et de la qualité, mon rôle est de contrôler et d'améliorer nos processus. Pour enrichir mon expertise, je pourrais bénéficier d'une formation en data analyst. Cette formation me permettrait d'ajouter une dimension analytique à mes responsabilités actuelles, en me permettant de prendre des décisions basées sur des données quantitatives et d'identifier des opportunités d'amélioration plus précises. En comprenant mieux les données liées à la satisfaction client, je pourrais proposer des solutions plus ciblées pour améliorer l'expérience client et contribuer à l'efficacité opérationnelle de notre organisation. De plus, cette formation m'offrirait des compétences transférables précieuses et élargirait les opportunités de carrière à l'avenir.
-  </p>
+  <p>  Expert en qualité à La Poste, vise à améliorer son expertise grâce à une formation en analyse de données pour une meilleure prise de décision et satisfaction client.
  </div>         
     """, unsafe_allow_html=True)
 
