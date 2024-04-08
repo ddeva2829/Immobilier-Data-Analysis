@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -29,43 +30,16 @@ with col[0]:
     </p>
  </div>
     """, unsafe_allow_html=True)
-  st.subheader("Profils des Membres du Groupe :")
-
-  st.subheader("Éric LOUGUET")
-  st.write("""
- <div style="text-align: justify;">
-   <p> Coordinateur de Supply Chain, cherche à comparer les conclusions du projet avec les opinions des professionnels de l'immobilier pour valider les analyses.
-   </p>
- </div>        
-    """, unsafe_allow_html=True)
-    
-  st.subheader("Marc DEVADEVAN")
-  st.write("""
- <div style="text-align: justify;">         
-  <p>  Expert en qualité à La Poste, vise à améliorer son expertise grâce à une formation en analyse de données pour une meilleure prise de décision et satisfaction client.
- </div>         
-    """, unsafe_allow_html=True)
-
-  st.subheader("Mohamed KEITA")
-  st.write("""
- <div style="text-align: justify;">          
-  <p> Conseiller financier en reconversion data analyste au sein de la banque CCF, il est en contact avec des experts métiers dans le financement immobilier et de courtages. 
-    
-   </p>
- </div>        
-   
-    """, unsafe_allow_html=True)
   
- if page == pages[1] : 
-    df=pd.read_csv("GouvImmo_full.csv")
-    st.dataframe(df.head(10))
-    st.write(df.shape)
-    st.dataframe(df.describe())
 
-with col[1]:
+  
+  
+ 
+ with col[1]:
   with st.expander('About', expanded=True):
         st.write('''
             - Data: [Data.Gouv.fr](https://files.data.gouv.fr/geo-dvf/latest/csv/).
             - :orange[**DataScientest**]: Ce projet a été réalisés dans le cadre de notre formation en data science via l'organisme Datascientest.
+            - :green[**Participant**]: Éric LOUGUET Marc DEVADEVAN Mohamed KEITA
+                 ''')
             
-            ''')
