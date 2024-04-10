@@ -31,15 +31,18 @@ with col[0]:
  </div>
     """, unsafe_allow_html=True)
   
-
+ if page == pages[1] : 
+    df=pd.read_csv("Valdoise_data.csv",sep=',',low_memory=False)
+    st.dataframe(df.head(10))
+    st.write(df.shape)
+    st.dataframe(df.describe())
   
-  
- 
+   
  with col[1]:
   with st.expander('About', expanded=True):
         st.write('''
             - Data: [Data.Gouv.fr](https://files.data.gouv.fr/geo-dvf/latest/csv/).
             - :orange[**DataScientest**]: Ce projet a été réalisés dans le cadre de notre formation en data science via l'organisme Datascientest.
-            - :green[**Participant**]: Éric LOUGUET Marc DEVADEVAN Mohamed KEITA
+            - :green[**Participants**]: Éric LOUGUET Marc DEVADEVAN Mohamed KEITA
                  ''')
             
