@@ -35,8 +35,69 @@ with col[0]:
     df=pd.read_csv("Valdoise_data.csv",sep=',',low_memory=False)
     st.dataframe(df.head(10))
     st.write(df.shape)
-    st.dataframe(df.describe())
-  
+    
+ if page == pages[2] : 
+    @st.cache_data
+    def charger_donnees():
+      df = pd.read_csv('Valdoise_data.csv')
+      df['nombre_pieces_principales'] = pd.to_numeric(df['nombre_pieces_principales'], errors='coerce')
+      # Assurez-vous de convertir les colonnes nécessaires en numérique si elles ne le sont pas déjà
+      df['valeur_fonciere'] = pd.to_numeric(df['valeur_fonciere'], errors='coerce')
+      df['surface_reelle_bati'] = pd.to_numeric(df['surface_reelle_bati'], errors='coerce')
+      # Calcul du Prix au m²
+      df['Prix au m²'] = df['valeur_fonciere'] / df['surface_reelle_bati']
+      return df
+    
+    df = charger_donnees()
+
+    df_filtered = df[(df['nombre_pieces_principales'] != 0) & (df['nombre_pieces_principales'] <= 15)]
+
+    # Display the charts based on user selection
+    # Select Chart Type
+    chart_type = st.sidebar.radio("Choisir le type de graphique:", (
+        'Distribution de "type_local_x"',
+        'Distribution des Pieces Principales',
+        'Surface Distribution par Type',
+        'Value Distribution par Type',
+        'Globale Value Distribution',
+        'Distribution du Prix au m²',
+        
+     ))
+
+    if chart_type == 'Distribution de "type_local_x"':
+      fig, ax = plt.subplots()
+      sns.countplot(x='type_local_x', data=df_filtered, palette='deep', ax=ax)
+      st.pyplot(fig)
+
+    elif chart_type == 'Distribution des Pieces Principales':
+      fig, ax = plt.subplots()
+      sns.countplot(x='nombre_pieces_principales', data=df_filtered, palette='deep', ax=ax)
+      st.pyplot(fig)
+
+    elif chart_type == 'Surface Distribution par Type':
+      fig = plt.figure()
+      sns.boxplot(x='type_local_x', y='surface_reelle_bati', data=df_filtered)
+      plt.xticks(rotation=45)
+      st.pyplot(fig)
+
+    elif chart_type == 'Value Distribution par Type':
+      fig = plt.figure()
+      sns.boxplot(x='type_local_x', y='valeur_fonciere', data=df_filtered)
+      plt.xticks(rotation=45)
+      st.pyplot(fig)
+
+    elif chart_type == 'Globale Value Distribution':
+      fig, ax = plt.subplots()
+      sns.histplot(df['valeur_fonciere'], bins=50, kde=False)
+      st.pyplot(fig)
+
+    elif chart_type == 'Distribution du Prix au m²':
+      df_filtered['Prix au m2'] = df_filtered['valeur_fonciere'] / df_filtered['surface_reelle_bati']
+      fig, ax = plt.subplots()
+      sns.distplot(df_filtered['Prix au m2'].dropna(), bins=50, kde=False)
+      st.pyplot(fig)
+
+      
    
  with col[1]:
   with st.expander('About', expanded=True):
